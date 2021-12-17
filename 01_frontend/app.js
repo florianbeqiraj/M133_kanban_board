@@ -6,6 +6,8 @@ let done = [];
 let tables = [tableToDo, tableInProgress, tableDone];
 let currentState;
 
+let baseUrl = "http://localhost:8000/"
+
 window.addEventListener("load", async () => {
   await renderTask()
 });
@@ -148,4 +150,26 @@ function buttonClick(button) {
       document.getElementById("taskDescription").value = "";
     }
   }
+}
+
+async function getTasks() {
+  let response = await fetch(baseUrl + "fetchTask", {
+    method: "GET",
+  });
+
+  return await response.json();
+}
+
+async function addTask(task) {
+  fetch(baseUrl + "addTask", {
+    method: "POST",
+    body: JSON.stringify(task)
+  });
+}
+
+async function deleteTask(id) {
+  url = baseUrl + "deleteTask/" + id;
+  fetch(url, {
+    method: "DELETE",
+  });
 }

@@ -26,3 +26,9 @@ III. If needed, upgrade to 1.4.6: ```deno upgrade --version 1.4.6```
 #### Run Project
 1) Open "kanban.html"
 2) Run following command in terminal: ```deno run --allow-net 02_backend/kanban.js```
+
+#### Use Kanban Board
+1) Click on the + symbol to add a new task-item
+2) Specify a name and click on "Create"
+3) Drag the task-items to where ever you want
+3) To delete a task, click on "Delete"

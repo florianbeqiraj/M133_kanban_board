@@ -15,5 +15,20 @@
                 <button id="addTaskBtn">Create</button>
             </div>
         </div>
+        <table>
+            <tr>
+                <th id="header-todo">to-do</th>
+                <th id="header-inProgress">in progress</th>
+                <th id="header-done">done</th>
+            </tr>
+            <tr>
+                <td id="tableToDo" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                <td id="tableInProgress" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                <td id="tableDone" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+            </tr>
+        </table>
+        <script src="./app.js">
+            
+        </script>
     </body>
 </html>
